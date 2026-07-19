@@ -1,4 +1,18 @@
+import type { Metadata } from "next"
 import { MobileHeader } from "@/components/mobile-header"
+
+const canonicalUrl = "https://employment-subsidy.ludgi.ai/guides/application-procedure"
+
+export const metadata: Metadata = {
+  title: "고용 보조금 신청절차 안내",
+  description: "고용 보조금 및 지원금의 자격 확인부터 신청, 심사, 지급까지 전체 절차를 안내합니다.",
+  alternates: { canonical: canonicalUrl },
+  openGraph: {
+    title: "고용 보조금 신청절차 안내",
+    description: "고용 보조금 및 지원금의 신청 절차를 단계별로 확인하세요.",
+    url: canonicalUrl,
+  },
+}
 
 export default function ApplicationProcedureGuidePage() {
   const steps = [
@@ -149,4 +163,3 @@ export default function ApplicationProcedureGuidePage() {
     </>
   )
 }
-
